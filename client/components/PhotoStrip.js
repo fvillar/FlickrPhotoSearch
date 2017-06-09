@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Image } from 'react-bootstrap';
 import _ from 'lodash';
+import PhotosActions from '../actions/actionCreators';
 
 class PhotoStrip extends Component {
 
@@ -9,9 +10,8 @@ class PhotoStrip extends Component {
         super(props, context);
     }
 
-    onClickImage(image){
-        console.log('image');
-        
+    onClickImage(item){
+        this.props.dispatch(PhotosActions.setCounter(item));        
     }
 
     render() {
@@ -25,10 +25,10 @@ class PhotoStrip extends Component {
 
                 return (
                     <div key={i}>
-                        <Image itemKey={i}
+                        <Image key={i}
                             src={path}
                             style={{ height: '100px', width: '100px' }}
-                            onClick={(i) => this.onClickImage(i)}
+                            onClick={() => this.onClickImage(i)}
                             responsive />
                     </div>
                 );

@@ -30,6 +30,10 @@ function photosReducer(state = photosInitialState.photos, action) {
             state = state.set('currentPhoto', counterDown - 1);
             return state;
 
+        case constants.SET_COUNTER:
+            state = state.set('currentPhoto', action.value);
+            return state;
+
         default:
             return state;
     }

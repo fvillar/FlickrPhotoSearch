@@ -34,6 +34,13 @@ class PhotoActions {
         };
     }
 
+    static setCounter(value) {
+        return {
+            type: Constants.SET_COUNTER,
+            value: value
+        };
+    }
+
     // =============================================== //
     // =============== ASYNC CALLS =================== //
     // =============================================== //
