@@ -6,6 +6,10 @@ import thunk from 'redux-thunk';
 import rootReducer from './reducers/index';
 import photosInitialState from './initialState/photosInitialState';
 
+if (typeof(window) == 'undefined'){
+    global.window = new Object();
+}
+
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const defaultState = Object.assign({}, photosInitialState);

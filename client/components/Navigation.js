@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 
 import PhotosActions from '../actions/actionCreators';
 
-class Navigation extends Component {
+export class Navigation extends Component {
 
     constructor(props, context) {
         super(props, context);

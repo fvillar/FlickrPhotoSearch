@@ -4,7 +4,7 @@ import { Image } from 'react-bootstrap';
 import _ from 'lodash';
 import PhotosActions from '../actions/actionCreators';
 
-class PhotoStrip extends Component {
+export class PhotoStrip extends Component {
 
     constructor(props, context) {
         super(props, context);
